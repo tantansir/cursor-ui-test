@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冥想APP原型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6A11CB',
+                        secondary: '#2575FC',
+                        dark: '#1e1e1e',
+                        light: '#f5f5f5'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+        * {
+            font-family: 'Noto Sans SC', "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-light text-gray-800">
+    <div class="max-w-7xl mx-auto p-5">
+        <h1 class="text-3xl font-bold mb-4">冥想APP原型设计</h1>
+        
+        <!-- 欢迎/登录页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">1. 欢迎/登录页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">欢迎页</div>
+                <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-xl overflow-hidden relative">
+                    <div class="h-full bg-gradient-to-r from-primary to-secondary text-white flex flex-col items-center justify-center p-10 text-center">
+                        <div class="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mb-10">
+                            <i class="ri-mental-health-line text-5xl text-primary"></i>
+                        </div>
+                        <h1 class="text-3xl font-bold mb-4">安心禅</h1>
+                        <p class="text-lg opacity-90 mb-16">每天几分钟，找回内心的平静</p>
+                        <button class="bg-white text-primary font-semibold py-4 px-10 rounded-full w-full max-w-[280px] mb-5">开始体验</button>
+                        <button class="bg-transparent border-2 border-white text-white font-semibold py-4 px-10 rounded-full w-full max-w-[280px]">已有账号? 登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 首页/发现页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">2. 首页/发现页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">首页</div>
+                <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-xl overflow-hidden relative">
+                    <div class="h-full overflow-y-auto pb-16">
+                        <div class="h-[60px] flex items-center justify-between px-5 border-b border-gray-100">
+                            <div class="text-lg font-semibold">首页</div>
+                            <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                <i class="ri-notification-3-line text-gray-600"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="p-5">
+                            <h2 class="text-2xl font-semibold mb-1">下午好，李明</h2>
+                            <p class="text-gray-600">今天，让我们一起享受片刻宁静</p>
+                        </div>
+                        
+                        <div class="mx-5 p-5 bg-gray-50 rounded-xl mb-5">
+                            <h3 class="font-semibold mb-2">今日冥想</h3>
+                            <div class="h-2 bg-gray-200 rounded mb-2">
+                                <div class="h-full w-[65%] bg-primary rounded"></div>
+                            </div>
+                            <p class="text-sm">已完成 13 分钟，目标 20 分钟</p>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mx-5 mb-3">推荐课程</h3>
+                        <div class="px-5">
+                            <div class="flex overflow-x-auto pb-4 -mx-1 scrollbar-hide">
+                                <div class="flex-none w-[280px] h-40 bg-gradient-to-r from-[#4facfe] to-[#00f2fe] rounded-xl mx-1 p-5 flex flex-col justify-between text-white">
+                                    <div class="text-xl font-semibold">专注冥想</div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="text-sm opacity-90">10分钟</div>
+                                        <div class="w-9 h-9 bg-white bg-opacity-30 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[280px] h-40 bg-gradient-to-r from-[#FF9A9E] to-[#FECFEF] rounded-xl mx-1 p-5 flex flex-col justify-between text-white">
+                                    <div class="text-xl font-semibold">舒缓压力</div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="text-sm opacity-90">15分钟</div>
+                                        <div class="w-9 h-9 bg-white bg-opacity-30 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[280px] h-40 bg-gradient-to-r from-[#43E97B] to-[#38F9D7] rounded-xl mx-1 p-5 flex flex-col justify-between text-white">
+                                    <div class="text-xl font-semibold">放松身心</div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="text-sm opacity-90">20分钟</div>
+                                        <div class="w-9 h-9 bg-white bg-opacity-30 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mx-5 mb-3 mt-6">每日精选</h3>
+                        <div class="px-5">
+                            <div class="flex overflow-x-auto pb-4 -mx-1 scrollbar-hide">
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">晨间唤醒</div>
+                                        <div class="text-xs text-gray-500">5分钟 • 初级</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">午休放松</div>
+                                        <div class="text-xs text-gray-500">10分钟 • 初级</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">睡前放松</div>
+                                        <div class="text-xs text-gray-500">15分钟 • 初级</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mx-5 mb-3 mt-6">冥想主题</h3>
+                        <div class="px-5">
+                            <div class="flex overflow-x-auto pb-4 -mx-1 scrollbar-hide">
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">减压</div>
+                                        <div class="text-xs text-gray-500">8个课程</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">专注</div>
+                                        <div class="text-xs text-gray-500">6个课程</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1455642305367-68834a9d5156?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">睡眠</div>
+                                        <div class="text-xs text-gray-500">10个课程</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 h-20 border-t border-gray-100 bg-white flex justify-around items-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-home-4-line text-primary"></i>
+                            </div>
+                            <div class="text-xs text-primary">首页</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-compass-3-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">发现</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-moon-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">睡眠</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 课程详情页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">3. 课程详情页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">课程详情</div>
+                <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-xl overflow-hidden relative">
+                    <div class="h-[250px] bg-gradient-to-r from-primary to-secondary p-5 flex flex-col justify-end text-white">
+                        <div class="absolute top-5 left-5 w-9 h-9 bg-white bg-opacity-30 rounded-full flex items-center justify-center">
+                            <i class="ri-arrow-left-s-line text-white"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-2">专注冥想</h2>
+                        <div class="flex mb-5">
+                            <div class="mr-4 text-sm opacity-90">初级</div>
+                            <div class="mr-4 text-sm opacity-90">7天课程</div>
+                            <div class="mr-4 text-sm opacity-90">4.9分</div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5">
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-3">课程介绍</h3>
+                            <p class="text-gray-700 leading-relaxed mb-3">专注冥想系列帮助你提升注意力，培养专注力。通过每天10-15分钟的练习，逐步减少分心，提高工作和学习效率。</p>
+                            <p class="text-gray-700 leading-relaxed">适合任何想要提升专注力的人，无需冥想经验。</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3">课程内容</h3>
+                            <div class="py-4 border-b border-gray-100 flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 mr-4"></div>
+                                <div>
+                                    <div class="font-medium mb-1">第1天：初识专注</div>
+                                    <div class="text-sm text-gray-500">10分钟</div>
+                                </div>
+                            </div>
+                            <div class="py-4 border-b border-gray-100 flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 mr-4"></div>
+                                <div>
+                                    <div class="font-medium mb-1">第2天：呼吸锚定</div>
+                                    <div class="text-sm text-gray-500">10分钟</div>
+                                </div>
+                            </div>
+                            <div class="py-4 border-b border-gray-100 flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 mr-4"></div>
+                                <div>
+                                    <div class="font-medium mb-1">第3天：觉察思绪</div>
+                                    <div class="text-sm text-gray-500">12分钟</div>
+                                </div>
+                            </div>
+                            <div class="py-4 border-b border-gray-100 flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 mr-4"></div>
+                                <div>
+                                    <div class="font-medium mb-1">第4天：身体扫描</div>
+                                    <div class="text-sm text-gray-500">15分钟</div>
+                                </div>
+                            </div>
+                            <div class="py-4 border-b border-gray-100 flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-gray-100 mr-4"></div>
+                                <div>
+                                    <div class="font-medium mb-1">第5天：专注练习</div>
+                                    <div class="text-sm text-gray-500">15分钟</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-[100px] left-5 right-5 bg-primary text-white text-center py-4 rounded-full text-lg font-semibold">开始课程</div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 h-20 border-t border-gray-100 bg-white flex justify-around items-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-home-4-line text-primary"></i>
+                            </div>
+                            <div class="text-xs text-primary">首页</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-compass-3-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">发现</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-moon-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">睡眠</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 冥想播放页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">4. 冥想播放页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">冥想播放器</div>
+                <div class="w-[375px] h-[812px] bg-gradient-to-b from-[#0F0C29] via-[#302B63] to-[#24243E] rounded-[40px] shadow-xl overflow-hidden relative text-center text-white p-10">
+                    <div class="absolute top-10 left-5 w-9 h-9 bg-white bg-opacity-10 rounded-full"></div>
+                    
+                    <div class="w-[250px] h-[250px] mx-auto mb-10 bg-white bg-opacity-10 rounded-2xl flex items-center justify-center mt-10">
+                        <span class="text-4xl">🧘</span>
+                    </div>
+                    
+                    <h2 class="text-2xl font-semibold mb-2">初识专注</h2>
+                    <p class="text-base opacity-80 mb-16">专注冥想 · 第1天</p>
+                    
+                    <div class="w-full mb-5">
+                        <div class="h-2 bg-white bg-opacity-10 rounded mb-2">
+                            <div class="h-full w-[35%] bg-white rounded"></div>
+                        </div>
+                        <div class="flex justify-between text-sm opacity-80 mb-10">
+                            <span>3:30</span>
+                            <span>10:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-around items-center max-w-[300px] mx-auto">
+                        <div class="w-[60px] h-[60px] rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="ri-skip-back-line text-2xl text-white"></i>
+                        </div>
+                        <div class="w-[80px] h-[80px] rounded-full bg-white flex items-center justify-center">
+                            <i class="ri-pause-line text-3xl text-primary"></i>
+                        </div>
+                        <div class="w-[60px] h-[60px] rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="ri-skip-forward-line text-2xl text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 睡眠内容页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">5. 睡眠内容页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">睡眠页面</div>
+                <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-xl overflow-hidden relative">
+                    <div class="h-full overflow-y-auto pb-16">
+                        <div class="h-[60px] flex items-center justify-between px-5 border-b border-gray-100">
+                            <div class="text-lg font-semibold">睡眠</div>
+                            <div class="w-6 h-6 bg-gray-100 rounded-full"></div>
+                        </div>
+                        
+                        <div class="h-[150px] bg-gradient-to-r from-[#141E30] to-[#243B55] text-white p-5 flex flex-col justify-center">
+                            <h2 class="text-2xl font-bold mb-2">安静入睡</h2>
+                            <p class="opacity-90">轻松入眠，享受高质量睡眠体验</p>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mx-5 mb-3 mt-6">睡眠故事</h3>
+                        <div class="px-5">
+                            <div class="flex overflow-x-auto pb-4 -mx-1 scrollbar-hide">
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">山林漫步</div>
+                                        <div class="text-xs text-gray-500">30分钟</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">海边小屋</div>
+                                        <div class="text-xs text-gray-500">25分钟</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1501691223387-dd0500403074?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">雨夜</div>
+                                        <div class="text-xs text-gray-500">20分钟</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mx-5 mb-3 mt-6">助眠音乐</h3>
+                        <div class="px-5">
+                            <div class="flex overflow-x-auto pb-4 -mx-1 scrollbar-hide">
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">深度放松</div>
+                                        <div class="text-xs text-gray-500">45分钟</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1513883049090-d0b7439799bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">轻柔钢琴</div>
+                                        <div class="text-xs text-gray-500">60分钟</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1557599443-2071a2df9c19?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">自然声音</div>
+                                        <div class="text-xs text-gray-500">90分钟</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mx-5 mb-3 mt-6">睡眠冥想</h3>
+                        <div class="px-5">
+                            <div class="flex overflow-x-auto pb-4 -mx-1 scrollbar-hide">
+                                <div class="flex-none w-[280px] h-40 bg-gradient-to-r from-[#141E30] to-[#243B55] rounded-xl mx-1 p-5 flex flex-col justify-between text-white">
+                                    <div class="text-xl font-semibold">深度睡眠</div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="text-sm opacity-90">20分钟</div>
+                                        <div class="w-9 h-9 bg-white bg-opacity-30 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[280px] h-40 bg-gradient-to-r from-[#0F2027] via-[#203A43] to-[#2C5364] rounded-xl mx-1 p-5 flex flex-col justify-between text-white">
+                                    <div class="text-xl font-semibold">安眠引导</div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="text-sm opacity-90">15分钟</div>
+                                        <div class="w-9 h-9 bg-white bg-opacity-30 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mx-5 mb-3 mt-6">自然声音</h3>
+                        <div class="px-5">
+                            <div class="flex overflow-x-auto pb-4 -mx-1 scrollbar-hide">
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">雨声</div>
+                                        <div class="text-xs text-gray-500">循环播放</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">海浪</div>
+                                        <div class="text-xs text-gray-500">循环播放</div>
+                                    </div>
+                                </div>
+                                <div class="flex-none w-[160px] bg-white rounded-xl mx-1 shadow-sm overflow-hidden">
+                                    <div class="h-[100px] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80')"></div>
+                                    <div class="p-3">
+                                        <div class="font-medium mb-1">森林</div>
+                                        <div class="text-xs text-gray-500">循环播放</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 h-20 border-t border-gray-100 bg-white flex justify-around items-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-home-4-line text-primary"></i>
+                            </div>
+                            <div class="text-xs text-primary">首页</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-compass-3-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">发现</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-moon-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">睡眠</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 个人档案页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">6. 个人档案页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">个人档案</div>
+                <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-xl overflow-hidden relative">
+                    <div class="h-full overflow-y-auto pb-16">
+                        <div class="h-[60px] flex items-center justify-between px-5 border-b border-gray-100">
+                            <div class="text-lg font-semibold">我的</div>
+                            <div class="w-6 h-6 bg-gray-100 rounded-full"></div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white py-10 px-5 text-center">
+                            <div class="w-[100px] h-[100px] bg-white rounded-full mx-auto mb-4"></div>
+                            <h2 class="text-2xl font-semibold mb-1">李明</h2>
+                            <p class="text-base opacity-80 mb-5">冥想爱好者，追求内心平静</p>
+                            
+                            <div class="flex justify-around mt-5">
+                                <div class="text-center">
+                                    <div class="text-xl font-semibold mb-1">28</div>
+                                    <div class="text-sm opacity-80">冥想天数</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-semibold mb-1">342</div>
+                                    <div class="text-sm opacity-80">总分钟数</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl font-semibold mb-1">12</div>
+                                    <div class="text-sm opacity-80">完成课程</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-5 py-4">
+                            <h3 class="text-lg font-semibold mb-2">我的冥想</h3>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4 flex items-center justify-center">
+                                    <i class="ri-history-line text-gray-600"></i>
+                                </div>
+                                <div class="flex-1 text-base">最近记录</div>
+                                <div class="text-gray-400"><i class="ri-arrow-right-s-line"></i></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">收藏课程</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">冥想习惯</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-5 py-4">
+                            <h3 class="text-lg font-semibold mb-2">设置</h3>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">账号设置</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">提醒设置</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">隐私政策</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">联系我们</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 h-20 border-t border-gray-100 bg-white flex justify-around items-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-home-4-line text-primary"></i>
+                            </div>
+                            <div class="text-xs text-primary">首页</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-compass-3-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">发现</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-moon-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">睡眠</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 数据统计页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">7. 数据统计页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">数据统计</div>
+                <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-xl overflow-hidden relative">
+                    <div class="h-full overflow-y-auto pb-16">
+                        <div class="h-[60px] flex items-center justify-between px-5 border-b border-gray-100">
+                            <div class="text-lg font-semibold">冥想统计</div>
+                            <div class="w-6 h-6 bg-gray-100 rounded-full"></div>
+                        </div>
+                        
+                        <div class="p-5 border-b border-gray-100">
+                            <h2 class="text-2xl font-semibold mb-3">我的冥想数据</h2>
+                            <div class="flex overflow-x-auto -mx-1 pb-2">
+                                <div class="flex-none px-5 py-2 bg-gray-100 text-gray-600 rounded-full mx-1">周</div>
+                                <div class="flex-none px-5 py-2 bg-primary text-white rounded-full mx-1">月</div>
+                                <div class="flex-none px-5 py-2 bg-gray-100 text-gray-600 rounded-full mx-1">年</div>
+                                <div class="flex-none px-5 py-2 bg-gray-100 text-gray-600 rounded-full mx-1">全部</div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-5">
+                            <div class="bg-gray-50 rounded-xl p-5 mb-5">
+                                <h3 class="text-lg font-semibold mb-3">冥想时长</h3>
+                                <div class="h-[200px] bg-white rounded-lg mb-3"></div>
+                                <p class="text-sm text-gray-600">本月共冥想 4 小时 12 分钟，比上月增加 25%</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-5 mb-5">
+                                <h3 class="text-lg font-semibold mb-3">冥想次数</h3>
+                                <div class="h-[200px] bg-white rounded-lg mb-3"></div>
+                                <p class="text-sm text-gray-600">本月共冥想 18 次，连续冥想 12 天</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 rounded-xl p-5 mb-5">
+                                <h3 class="text-lg font-semibold mb-3">冥想主题分布</h3>
+                                <div class="h-[200px] bg-white rounded-lg mb-3"></div>
+                                <p class="text-sm text-gray-600">专注类冥想占比最高，达到 45%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 right-0 h-20 border-t border-gray-100 bg-white flex justify-around items-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-home-4-line text-primary"></i>
+                            </div>
+                            <div class="text-xs text-primary">首页</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-compass-3-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">发现</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-moon-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">睡眠</div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-6 h-6 bg-gray-100 rounded-full mb-1 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-500"></i>
+                            </div>
+                            <div class="text-xs text-gray-500">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 设置页 -->
+        <h2 class="text-2xl font-semibold mt-10 mb-4">8. 设置页</h2>
+        <div class="flex flex-wrap gap-8 justify-center mb-12">
+            <div>
+                <div class="text-center text-gray-600 mb-3 text-lg">设置页面</div>
+                <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-xl overflow-hidden relative">
+                    <div class="h-full overflow-y-auto pb-16">
+                        <div class="h-[60px] flex items-center justify-between px-5 border-b border-gray-100">
+                            <div class="text-lg font-semibold">设置</div>
+                            <div class="w-6 h-6 bg-gray-100 rounded-full"></div>
+                        </div>
+                        
+                        <div class="px-5 py-4">
+                            <h3 class="text-lg font-semibold mb-2">账号设置</h3>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">个人资料</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">修改密码</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">隐私设置</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-5 py-4">
+                            <h3 class="text-lg font-semibold mb-2">通知设置</h3>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">每日提醒</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">推送通知</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-5 py-4">
+                            <h3 class="text-lg font-semibold mb-2">应用设置</h3>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">下载设置</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">存储管理</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">清除缓存</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                        </div>
+                        
+                        <div class="px-5 py-4">
+                            <h3 class="text-lg font-semibold mb-2">支持</h3>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">帮助中心</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">用户反馈</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                            <div class="flex items-center py-4 border-b border-gray-100">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full mr-4"></div>
+                                <div class="flex-1 text-base">关于我们</div>
+                                <div class="text-gray-400">></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center py-4 px-5 mt-7 text-red-500">
+                            <div class="w-6 h-6 bg-red-100 rounded-full mr-4 flex items-center justify-center">
+                                <i class="ri-logout-box-r-line text-red-500"></i>
+                            </div>
+                            <div class="flex-1 text-base">退出登录</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
